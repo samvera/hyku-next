@@ -8,7 +8,7 @@ import React from "react";
 import hykuLogo from "../../../public/logo-hyku.png";
 import { useState } from "react";
 
-const navigation = [
+export const navigation = [
   {
     name: "Features and Implementations",
     href: "/features",
@@ -42,6 +42,8 @@ const Header = () => {
             <Image src={hykuLogo} alt="Hyku logo" className="h-8 w-auto" />
           </a>
         </div>
+
+        {/* Mobile nav bar */}
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -52,6 +54,8 @@ const Header = () => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+
+        {/* Desktop navigation */}
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <a

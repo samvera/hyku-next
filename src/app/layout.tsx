@@ -1,8 +1,9 @@
 import "./globals.css";
 
+import Footer from "@/components/layout/footer";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
-import Nav from "@/components/layout/nav";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        {/* <Nav /> */}
-        {children}
+        <ThemeProvider attribute="class">
+          <>
+            {children}
+            <Footer />
+          </>
+        </ThemeProvider>
       </body>
     </html>
   );
