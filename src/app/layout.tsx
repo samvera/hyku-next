@@ -21,10 +21,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class">
-          <>
-            {children}
-            <Footer />
-          </>
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

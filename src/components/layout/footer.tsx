@@ -38,7 +38,7 @@ export default function Footer() {
             <div key={item.name} className="pb-6">
               <a
                 href={item.href}
-                className="text-sm leading-6 text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100"
+                className="text-sm leading-6 text-foreground/90 hover:text-foreground "
               >
                 {item.name}
               </a>
@@ -51,14 +51,14 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-foreground-muted/90 hover:text-foreground-muted"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+        <p className="mt-10 text-center text-xs leading-5 text-foreground-muted">
           &copy; 2024 Hyku. All rights reserved.
         </p>
       </div>
