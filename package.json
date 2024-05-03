@@ -2,6 +2,8 @@
   "name": "hyku-next",
   "version": "0.1.0",
   "private": true,
+  "author": "Adam J. Arling <aarling@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
