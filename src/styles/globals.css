@@ -48,6 +48,10 @@
     @apply relative rounded bg-gray-200 dark:bg-gray-800 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
   }
 
+  a {
+    @apply font-semibold underline;
+  }
+
   .lead {
     @apply text-xl text-gray-600 dark:text-gray-400;
   }

@@ -2,7 +2,7 @@
 
 import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 
-import ThemeSwitch from "./theme-switch";
+import ThemeSwitch from "@/components/theme-switch";
 import { navigation } from "@/components/layout/header";
 
 const navigationExtended = [

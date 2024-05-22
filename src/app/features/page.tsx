@@ -1,10 +1,10 @@
-import Card from "@/components/card";
 import Container from "@/components/layout/container";
 import Header from "@/components/layout/header";
+import Implementations from "@/components/features/implementations";
 import MainWrapper from "@/components/layout/main-wrapper";
-import PageHeader from "@/components/layout/page-header";
+import PageHeader from "@/components/page-header";
 
-export default function Homepage() {
+export default async function FeaturesPage() {
   return (
     <div className="">
       <Header />
@@ -80,9 +80,7 @@ export default function Homepage() {
 
           <section className="pt-20">
             <h2>Implementations</h2>
-            <p>
-              https://samvera.atlassian.net/wiki/spaces/hyku/pages/819724378/Hyku+Implementations
-            </p>
+            <Implementations />
           </section>
         </Container>
       </MainWrapper>
