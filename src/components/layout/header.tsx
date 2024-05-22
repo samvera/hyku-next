@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { Dialog } from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import hykuLogo from "../../../public/logo-hyku.png";
 import { useState } from "react";
@@ -37,10 +38,10 @@ const Header = () => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+          <Link href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Hyku</span>
             <Image src={hykuLogo} alt="Hyku logo" className="h-8 w-auto" />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile nav bar */}
