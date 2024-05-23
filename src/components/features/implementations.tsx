@@ -6,7 +6,7 @@ import useGetContentfulData from "@/hooks/use-get-contentful-data";
 
 export default function Implementations() {
   const data = useGetContentfulData("integration");
-  console.log("data", data);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {data &&
