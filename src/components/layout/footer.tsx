@@ -9,7 +9,8 @@ const navigationExtended = [
   ...navigation,
   {
     name: "Learn More",
-    href: "/learn-more",
+    href: "https://github.com/samvera/hyku",
+    isExternal: true,
   },
 ];
 
@@ -38,7 +39,11 @@ export default function Footer() {
             <div key={item.name} className="pb-6">
               <a
                 href={item.href}
-                className="text-sm leading-6 text-foreground/90 hover:text-foreground "
+                className="text-sm leading-6 text-foreground/90 hover:text-foreground"
+                {...(item.isExternal && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
               >
                 {item.name}
               </a>

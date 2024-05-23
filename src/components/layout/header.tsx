@@ -9,7 +9,13 @@ import React from "react";
 import hykuLogo from "../../../public/logo-hyku.png";
 import { useState } from "react";
 
-export const navigation = [
+export type NavItem = {
+  href: string;
+  isExternal?: boolean;
+  name: string;
+};
+
+export const navigation: NavItem[] = [
   {
     name: "Features and Implementations",
     href: "/features",
@@ -62,7 +68,7 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-foreground hover:text-foreground/90"
+              className="text-sm font-medium leading-6 text-foreground hover:text-foreground/90"
             >
               {item.name}
             </a>
@@ -114,7 +120,9 @@ const Header = () => {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="https://github.com/samvera/hyku"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-foreground hover:bg-foreground/5"
                 >
                   Learn more

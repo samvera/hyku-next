@@ -20,6 +20,7 @@ export default function Implementations() {
               projectUrl,
             },
           } = item;
+
           return (
             <Card key={item.sys.id}>
               <div className="space-y-3">

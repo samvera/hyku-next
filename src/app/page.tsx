@@ -6,8 +6,6 @@ import appScreenshot from "../../public/app-screenshot.png";
 export default function Homepage() {
   return (
     <div className="">
-      <Header />
-
       <MainWrapper>
         <div className="relative isolate">
           <div

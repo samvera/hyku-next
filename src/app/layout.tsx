@@ -1,11 +1,14 @@
 import "@/styles/globals.css";
 
+import { Inter, Open_Sans } from "next/font/google";
+
 import Footer from "@/components/layout/footer";
-import { Inter } from "next/font/google";
+import Header from "@/components/layout/header";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,8 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${openSans.className} antialiased`}>
         <ThemeProvider attribute="class">
+          <Header />
           {children}
           <Footer />
         </ThemeProvider>

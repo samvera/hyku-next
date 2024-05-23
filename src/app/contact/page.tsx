@@ -8,7 +8,7 @@ export default function Homepage() {
     <div className="">
       <Header />
       <MainWrapper>
-        <PageHeader title="Getting Started" description="Something here" />
+        <PageHeader title="Contact" description="Something here" />
         <Container>asdf</Container>
       </MainWrapper>
     </div>
