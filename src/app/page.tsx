@@ -1,5 +1,6 @@
 import Header from "@/components/layout/header";
 import Image from "next/image";
+import Link from "next/link";
 import MainWrapper from "@/components/layout/main-wrapper";
 import appScreenshot from "../../public/app-screenshot.png";
 
@@ -32,15 +33,17 @@ export default function Homepage() {
                   provide access to digital content.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
-                  <a
-                    href="#"
+                  <Link
+                    href="/get-started"
                     className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     Get started
-                  </a>
+                  </Link>
                   <a
-                    href="#"
+                    href="https://github.com/samvera/hyku"
                     className="text-sm font-semibold leading-6 text-foreground"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Documentation <span aria-hidden="true">→</span>
                   </a>

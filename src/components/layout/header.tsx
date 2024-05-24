@@ -69,19 +69,21 @@ const Header = () => {
         {/* Desktop navigation */}
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="text-sm font-medium leading-6 text-foreground hover:text-foreground/90"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="#"
+            href="https://github.com/samvera/hyku"
             className="text-sm font-semibold leading-6 text-foreground hover:text-foreground/90"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Learn more <span aria-hidden="true">&rarr;</span>
           </a>
@@ -113,13 +115,13 @@ const Header = () => {
             <div className="-my-6 divide-y divide-foreground-muted/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-foreground/5"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className="py-6">

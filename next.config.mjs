@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  assetPrefix: "",
-  basePath: process.env.NODE_ENV === "production" ? "/hyku-next/" : "",
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   experimental: {
     esmExternals: true,
   },
