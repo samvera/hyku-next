@@ -17,7 +17,7 @@ export default function NewsList() {
               data.map(({ fields, sys }: { fields: any; sys: any }) => (
                 <article
                   key={sys.id}
-                  className="flex max-w-xl flex-col items-start justify-between"
+                  className="flex max-w-xl flex-col items-start justify-between animate-fade-in"
                 >
                   <div className="flex items-center gap-x-4 text-xs">
                     <time

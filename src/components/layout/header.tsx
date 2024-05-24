@@ -25,6 +25,10 @@ export const navigation: NavItem[] = [
     href: "/getting-started",
   },
   {
+    name: "Presentations and Demos",
+    href: "/presentations",
+  },
+  {
     name: "News",
     href: "/news",
   },

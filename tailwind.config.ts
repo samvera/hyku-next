@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-const colors = require("tailwindcss/colors");
 
 const config: Config = {
   content: [
@@ -10,6 +9,9 @@ const config: Config = {
   darkMode: "selector",
   theme: {
     extend: {
+      animation: {
+        "fade-in": "fadeIn 0.5s ease-in-out",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -21,6 +23,12 @@ const config: Config = {
         "foreground-muted":
           "hsl(var(--color-foreground-muted) / <alpha-value>)",
         primary: "hsl(var(--color-primary) / <alpha-value>)",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
     },
   },

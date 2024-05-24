@@ -1,6 +1,6 @@
 "use client";
 
-import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { GitHub, Twitter, Youtube } from "react-feather";
 
 import ThemeSwitch from "@/components/theme-switch";
 import { navigation } from "@/components/layout/header";
@@ -17,13 +17,18 @@ const navigationExtended = [
 const socials = [
   {
     name: "X",
-    href: "#",
-    icon: TwitterLogoIcon,
+    href: "http://twitter.com/HykuRepo",
+    icon: Twitter,
   },
   {
     name: "GitHub",
-    href: "#",
-    icon: GitHubLogoIcon,
+    href: "https://github.com/samvera/hyku",
+    icon: GitHub,
+  },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/channel/UC_m1Ovaaasa2ksyGaqz5i0Q",
+    icon: Youtube,
   },
 ];
 
@@ -59,7 +64,7 @@ export default function Footer() {
               className="text-foreground-muted/90 hover:text-foreground-muted"
             >
               <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
+              <item.icon className="h-5 w-5" aria-hidden="true" />
             </a>
           ))}
         </div>
