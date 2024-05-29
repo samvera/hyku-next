@@ -16,7 +16,6 @@ export default function useGetContentfulData(contentType: string) {
         content_type: contentType,
       })
       .then((response) => {
-        console.log("response", response);
         setData(response.items);
       })
       .catch((error) => {

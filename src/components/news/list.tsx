@@ -1,20 +1,22 @@
 "use client";
 
+import { formatDate, sortDates } from "@/lib/format-date";
+
 import RichTextContent from "../rich-text-content";
 import { UserGroupIcon } from "@heroicons/react/20/solid";
-import { formatDate } from "@/lib/format-date";
 import useGetContentfulData from "@/hooks/use-get-contentful-data";
 
 export default function NewsList() {
   const data = useGetContentfulData("newsItem");
+  const sorted = data ? data.sort(sortDates("desc", "publishDate")) : [];
 
   return (
     <div className="">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
           <div className="space-y-16 border-t border-gray-200 pt-10 sm:pt-16">
-            {data &&
-              data.map(({ fields, sys }: { fields: any; sys: any }) => (
+            {sorted &&
+              sorted.map(({ fields, sys }: { fields: any; sys: any }) => (
                 <article
                   key={sys.id}
                   className="flex max-w-xl flex-col items-start justify-between animate-fade-in"

@@ -1,16 +1,18 @@
 "use client";
 
-import { formatDate } from "@/lib/format-date";
+import { formatDate, sortDates } from "@/lib/format-date";
+
 import useGetContentfulData from "@/hooks/use-get-contentful-data";
 
 export default function PresentationsList() {
   const data = useGetContentfulData("presentation");
-  console.log("data", data);
+
+  const sorted = data ? data.sort(sortDates("desc", "publishedDate")) : [];
 
   return (
     <ul role="list" className="list-none ml-0 divide-y divide-gray-100 ">
-      {data &&
-        data.map(({ fields, sys }: { fields: any; sys: any }) => (
+      {sorted &&
+        sorted.map(({ fields, sys }: { fields: any; sys: any }) => (
           <>
             <li
               key={sys.id}
