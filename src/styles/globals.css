@@ -55,6 +55,15 @@
   .lead {
     @apply text-xl text-gray-600 dark:text-gray-400;
   }
+
+  .button {
+    @apply no-underline rounded-md bg-gray-200 dark:bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-foreground shadow-sm hover:bg-gray-200/90 dark:hover:bg-gray-800/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  .button-primary {
+    /** Apply .button styles and then add some more */
+    @apply button bg-primary hover:bg-primary/90 text-white;
+  }
 }
 
 @layer utilities {

@@ -3,9 +3,14 @@ import Container from "@/components/layout/container";
 interface PageHeaderProps {
   title: string;
   description: string;
+  children?: React.ReactNode;
 }
 
-export default function PageHeader({ title, description }: PageHeaderProps) {
+export default function PageHeader({
+  title,
+  description,
+  children,
+}: PageHeaderProps) {
   return (
     <div className="py-24 sm:py-32 animate-fade-in">
       <Container>
@@ -14,6 +19,7 @@ export default function PageHeader({ title, description }: PageHeaderProps) {
           <p className="mt-6 text-lg leading-8 text-foreground/70">
             {description}
           </p>
+          {children}
         </div>
       </Container>
     </div>

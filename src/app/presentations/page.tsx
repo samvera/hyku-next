@@ -11,8 +11,17 @@ export default function PresentationsPage() {
       <MainWrapper>
         <PageHeader
           title="Presentations and Demos"
-          description="Something here"
-        />
+          description="In addition to the archived presentation below, useful Hyku feature demos can be found on YouTube."
+        >
+          <div className="mt-8 flex-row space-x-4">
+            <a href="#" className="button-primary">
+              Hyku YouTube Channel
+            </a>
+            <a href="#" className="button">
+              Hydra-in-a-Box (early demos)
+            </a>
+          </div>
+        </PageHeader>
         <Container>
           <PresentationsList />
         </Container>
