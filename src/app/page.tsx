@@ -1,4 +1,5 @@
 import Header from "@/components/layout/header";
+import HostedSolutions from "@/components/hosted-solutions";
 import Image from "next/image";
 import Link from "next/link";
 import MainWrapper from "@/components/layout/main-wrapper";
@@ -62,6 +63,7 @@ export default function Homepage() {
               </div>
             </div>
           </div>
+          <HostedSolutions />
           <div
             className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
             aria-hidden="true"
