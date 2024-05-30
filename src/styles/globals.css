@@ -44,12 +44,25 @@
     @apply my-6 ml-6 list-disc [&>li]:mt-2;
   }
 
+  dl p,
+  dl ul {
+    @apply [&:not(:first-child)]:mt-4 leading-7 !important;
+  }
+
+  dt {
+    @apply font-semibold pb-1 [&:not(:first-child)]:mt-6;
+  }
+
+  dd {
+    @apply pl-2;
+  }
+
   code {
     @apply relative rounded bg-gray-200 dark:bg-gray-800 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
   }
 
   main a {
-    @apply font-semibold underline;
+    @apply font-semibold underline hover:no-underline;
   }
 
   .lead {

@@ -40,7 +40,7 @@ export default function HostedSolutions() {
                   href={hs.url}
                   target="_blank"
                   rel=""
-                  className="text-sm text-primary"
+                  className="text-sm text-primary no-underline"
                 >
                   {hs.url}
                 </a>

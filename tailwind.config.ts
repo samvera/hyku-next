@@ -7,6 +7,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "selector",
+  important: true,
   theme: {
     extend: {
       animation: {

@@ -27,16 +27,28 @@ export default function Implementations() {
               <Card key={item.sys.id}>
                 <div className="space-y-3">
                   <h3>{productname}</h3>
-                  <p>{projectUrl}</p>
-                  <div>
-                    <RichTextContent content={institutionAndPartners} />
-                  </div>
-                  <div>
-                    <RichTextContent content={briefDescription} />
-                  </div>
-                  <div>
-                    <RichTextContent content={mainFeatures} />
-                  </div>
+                  <a
+                    href={projectUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-block"
+                  >
+                    {projectUrl}
+                  </a>
+                  <dl className="pt-4">
+                    <dt>Institutional Partners</dt>
+                    <dd>
+                      <RichTextContent content={institutionAndPartners} />
+                    </dd>
+                    <dt>Brief Description</dt>
+                    <dd>
+                      <RichTextContent content={briefDescription} />
+                    </dd>
+                    <dt>Main Features</dt>
+                    <dd>
+                      <RichTextContent content={mainFeatures} />
+                    </dd>
+                  </dl>
                 </div>
               </Card>
             );

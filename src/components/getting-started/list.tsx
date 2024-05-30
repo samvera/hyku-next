@@ -71,7 +71,7 @@ export default function GettingStartedList() {
               <p className="mt-6">
                 <a
                   href={feature.href}
-                  className="text-sm font-semibold leading-6 text-primary"
+                  className="text-sm font-semibold leading-6 text-primary no-underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

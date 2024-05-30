@@ -27,7 +27,10 @@ export default function ContactCard({
               </a>
             )}
             {url && (
-              <a className="font-semibold text-primary break-words" href={url}>
+              <a
+                className="font-semibold text-primary break-words no-underline"
+                href={url}
+              >
                 {url}
               </a>
             )}

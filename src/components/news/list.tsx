@@ -48,7 +48,7 @@ export default function NewsList() {
                           {fields.author}
                         </span>
                       </p>
-                      <p className="text-foreground-muted">
+                      <p className="text-foreground-muted !mt-0">
                         Hyku Administrator
                       </p>
                     </div>

@@ -27,7 +27,7 @@ export default function Homepage() {
                   </Link>
                   <a
                     href="https://github.com/samvera/hyku"
-                    className="text-sm font-semibold leading-6 text-foreground"
+                    className="text-sm font-semibold leading-6 text-foreground no-underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
