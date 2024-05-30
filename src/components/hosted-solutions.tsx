@@ -1,3 +1,5 @@
+import Container from "@/components/layout/container";
+
 const hostedSolutions = [
   {
     name: "HykuUP",
@@ -19,12 +21,10 @@ const hostedSolutions = [
 
 export default function HostedSolutions() {
   return (
-    <div className=" py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="py-24 sm:py-32">
+      <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Hosted Solutions
-          </h2>
+          <h2>Hosted Solutions</h2>
           <p className="mt-6 text-lg leading-8 text-foreground-muted">
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
             voluptatum cupiditate veritatis in accusamus quisquam.
@@ -48,7 +48,7 @@ export default function HostedSolutions() {
             </div>
           ))}
         </dl>
-      </div>
+      </Container>
     </div>
   );
 }

@@ -48,7 +48,6 @@ export default function Homepage() {
               </div>
             </div>
           </div>
-          <HostedSolutions />
         </BgLayer>
       </MainWrapper>
     </div>
