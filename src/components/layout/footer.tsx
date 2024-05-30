@@ -2,6 +2,7 @@
 
 import { GitHub, Twitter, Youtube } from "react-feather";
 
+import Link from "next/link";
 import ThemeSwitch from "@/components/theme-switch";
 import { navigation } from "@/components/layout/header";
 
@@ -42,7 +43,7 @@ export default function Footer() {
         >
           {navigationExtended.map((item) => (
             <div key={item.name} className="pb-6">
-              <a
+              <Link
                 href={item.href}
                 className="text-sm leading-6 text-foreground/90 hover:text-foreground"
                 {...(item.isExternal && {
@@ -51,25 +52,25 @@ export default function Footer() {
                 })}
               >
                 {item.name}
-              </a>
+              </Link>
             </div>
           ))}
         </nav>
         <div className="mt-10 flex justify-center items-center space-x-10">
           <ThemeSwitch />
           {socials.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="text-foreground-muted/90 hover:text-foreground-muted"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-5 w-5" aria-hidden="true" />
-            </a>
+            </Link>
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-foreground-muted">
-          &copy; 2024 Hyku. All rights reserved.
+          &copy; {new Date().getFullYear()} Hyku. All rights reserved.
         </p>
       </div>
     </footer>
