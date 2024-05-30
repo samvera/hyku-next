@@ -1,5 +1,6 @@
 import BgLayer from "@/components/layout/bg-layer";
 import Container from "@/components/layout/container";
+import FaqList from "@/components/faq";
 import GettingStartedList from "@/components/getting-started/list";
 import Header from "@/components/layout/header";
 import HostedSolutions from "@/components/hosted-solutions";
@@ -22,6 +23,7 @@ export default function GettingStartedPage() {
               <HostedSolutions />
               <section className="mt-16 sm:mt-20 lg:mt-24">
                 <h2>F.A.Q. Frequently Asked Questions</h2>
+                <FaqList />
               </section>
             </div>
           </Container>
