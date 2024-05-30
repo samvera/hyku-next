@@ -1,3 +1,4 @@
+import BgLayer from "@/components/layout/bg-layer";
 import ContactCard from "@/components/contact/card";
 import Container from "@/components/layout/container";
 import Header from "@/components/layout/header";
@@ -35,32 +36,34 @@ export default function ContactPage() {
     <div className="">
       <Header />
       <MainWrapper>
-        <Container>
-          <div className=" py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 dark:divide-gray-900 lg:mx-0 lg:max-w-none">
-                <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
-                  <div>
-                    <h2 className="text-3xl font-bold tracking-tight">
-                      Get in touch
-                    </h2>
-                    <p className="mt-4 leading-7 text-foreground-muted">
-                      As part of the Samvera Community, Hyku is driven by the
-                      participation of users and developers. There are many ways
-                      to contribute, collaborate, or just get some questions
-                      answered as you get started with Hyku.
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-                    {contactCards.map((card, index) => (
-                      <ContactCard key={index} {...card} />
-                    ))}
+        <BgLayer>
+          <Container>
+            <div className=" py-24 sm:py-32">
+              <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 dark:divide-gray-900 lg:mx-0 lg:max-w-none">
+                  <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
+                    <div>
+                      <h2 className="text-3xl font-bold tracking-tight">
+                        Get in touch
+                      </h2>
+                      <p className="mt-4 leading-7 text-foreground-muted">
+                        As part of the Samvera Community, Hyku is driven by the
+                        participation of users and developers. There are many
+                        ways to contribute, collaborate, or just get some
+                        questions answered as you get started with Hyku.
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
+                      {contactCards.map((card, index) => (
+                        <ContactCard key={index} {...card} />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Container>
+          </Container>
+        </BgLayer>
       </MainWrapper>
     </div>
   );

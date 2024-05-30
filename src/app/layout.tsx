@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import { Inter, Open_Sans } from "next/font/google";
 
