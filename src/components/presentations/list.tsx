@@ -7,7 +7,6 @@ import useGetContentfulData from "@/hooks/use-get-contentful-data";
 
 export default function PresentationsList() {
   const data = useGetContentfulData("presentation");
-  console.log("data", data);
 
   const sorted = data ? data.sort(sortDates("desc", "publishedDate")) : [];
 

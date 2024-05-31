@@ -5,7 +5,6 @@ import useGetContentfulData from "@/hooks/use-get-contentful-data";
 
 export default function FeatureList() {
   const data = useGetContentfulData("feature");
-  console.log("data", data);
 
   return (
     <ul>
