@@ -3,12 +3,26 @@
 import { formatDate, sortDates } from "@/lib/format-date";
 
 import RichTextContent from "../rich-text-content";
+import Skeleton from "react-loading-skeleton";
 import { UserGroupIcon } from "@heroicons/react/20/solid";
-import useGetContentfulData from "@/hooks/use-get-contentful-data";
+import { getData } from "@/lib/get-contentful-data";
+import { useQuery } from "@tanstack/react-query";
 
 export default function NewsList() {
-  const data = useGetContentfulData("newsItem");
+  const { isPending, error, data, isFetching } = useQuery({
+    queryKey: ["news"],
+    queryFn: () => getData("newsItem"),
+  });
+
   const sorted = data ? data.sort(sortDates("desc", "publishDate")) : [];
+
+  if (isPending || isFetching) {
+    return (
+      <div className="mx-auto max-w-2xl">
+        <Skeleton count={5} height={50} />
+      </div>
+    );
+  }
 
   return (
     <div className="">

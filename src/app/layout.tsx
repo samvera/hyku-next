@@ -1,15 +1,14 @@
 import "@/styles/globals.css";
 import "react-loading-skeleton/dist/skeleton.css";
 
-import { Inter, Open_Sans } from "next/font/google";
-
+import FetchDataWrapper from "@/components/fetch-data-wrapper";
 import Footer from "@/components/layout/footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Header from "@/components/layout/header";
 import type { Metadata } from "next";
+import { Open_Sans } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 
-const inter = Inter({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -31,9 +30,11 @@ export default function RootLayout({
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!} />
       <body className={`${openSans.className} antialiased`}>
         <ThemeProvider attribute="class">
-          <Header />
-          {children}
-          <Footer />
+          <FetchDataWrapper>
+            <Header />
+            {children}
+            <Footer />
+          </FetchDataWrapper>
         </ThemeProvider>
       </body>
     </html>

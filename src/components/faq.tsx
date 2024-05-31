@@ -8,12 +8,14 @@ import {
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 
 import RichTextContent from "./rich-text-content";
-import useGetContentfulData from "@/hooks/use-get-contentful-data";
+import { getData } from "@/lib/get-contentful-data";
+import { useQuery } from "@tanstack/react-query";
 
 export default function FaqList() {
-  const data = useGetContentfulData("faq");
-
-  const foo = "asdf";
+  const { isPending, error, data, isFetching } = useQuery({
+    queryKey: ["faqs"],
+    queryFn: () => getData("faq"),
+  });
 
   return (
     <div>
@@ -39,7 +41,7 @@ export default function FaqList() {
                       </DisclosureButton>
                     </dt>
                     <DisclosurePanel as="dd" className="mt-2 pr-12">
-                      <div className="text-base leading-7 text-foreground-muted">
+                      <div className="text-base leading-7 text-gray-700 dark:text-gray-300">
                         <RichTextContent content={fields.answer} />
                       </div>
                     </DisclosurePanel>

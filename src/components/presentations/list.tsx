@@ -3,16 +3,20 @@
 import { formatDate, sortDates } from "@/lib/format-date";
 
 import Skeleton from "react-loading-skeleton";
-import useGetContentfulData from "@/hooks/use-get-contentful-data";
+import { getData } from "@/lib/get-contentful-data";
+import { useQuery } from "@tanstack/react-query";
 
 export default function PresentationsList() {
-  const data = useGetContentfulData("presentation");
+  const { isPending, error, data, isFetching } = useQuery({
+    queryKey: ["presentation"],
+    queryFn: () => getData("presentation"),
+  });
 
   const sorted = data ? data.sort(sortDates("desc", "publishedDate")) : [];
 
   return (
     <ul role="list" className="list-none ml-0 divide-y divide-gray-100 ">
-      {sorted.length === 0 && <Skeleton count={5} height={50} />}
+      {(isFetching || isPending) && <Skeleton count={5} height={50} />}
       {sorted.length > 0 &&
         sorted.map(({ fields, sys }: { fields: any; sys: any }) => (
           <li
