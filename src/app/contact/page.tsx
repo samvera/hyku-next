@@ -3,6 +3,7 @@ import ContactCard from "@/components/contact/card";
 import Container from "@/components/layout/container";
 import Header from "@/components/layout/header";
 import MainWrapper from "@/components/layout/main-wrapper";
+import { Metadata } from "next";
 
 const contactCards = [
   {
@@ -32,6 +33,11 @@ const contactCards = [
     title: "Email",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contact the Hyku team",
+};
 
 export default function ContactPage() {
   return (

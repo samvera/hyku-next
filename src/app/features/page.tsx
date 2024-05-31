@@ -4,7 +4,12 @@ import FeatureList from "@/components/features/list";
 import Header from "@/components/layout/header";
 import Implementations from "@/components/features/implementations";
 import MainWrapper from "@/components/layout/main-wrapper";
+import { Metadata } from "next";
 import PageHeader from "@/components/page-header";
+
+export const metadata: Metadata = {
+  title: "Features and Implementations",
+};
 
 export default async function FeaturesPage() {
   return (

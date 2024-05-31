@@ -5,7 +5,12 @@ import GettingStartedList from "@/components/getting-started/list";
 import Header from "@/components/layout/header";
 import HostedSolutions from "@/components/hosted-solutions";
 import MainWrapper from "@/components/layout/main-wrapper";
+import { Metadata } from "next";
 import PageHeader from "@/components/page-header";
+
+export const metadata: Metadata = {
+  title: "Getting Started",
+};
 
 export default function GettingStartedPage() {
   return (
