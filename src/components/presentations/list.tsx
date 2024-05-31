@@ -7,6 +7,7 @@ import useGetContentfulData from "@/hooks/use-get-contentful-data";
 
 export default function PresentationsList() {
   const data = useGetContentfulData("presentation");
+  console.log("data", data);
 
   const sorted = data ? data.sort(sortDates("desc", "publishedDate")) : [];
 
@@ -33,14 +34,16 @@ export default function PresentationsList() {
             </div>
             <div className="space-y-2">
               <div>{fields.conference}</div>
-              <div className="mt-1 flex items-center justify-start md:justify-end gap-x-1.5">
-                <div className="flex-none rounded-full bg-emerald-500/20 p-1">
-                  <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              {fields.online && (
+                <div className="mt-1 flex items-center justify-start md:justify-end gap-x-1.5">
+                  <div className="flex-none rounded-full bg-emerald-500/20 p-1">
+                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  </div>
+                  <div className="text-xs leading-5 text-foreground-muted">
+                    Online
+                  </div>
                 </div>
-                <div className="text-xs leading-5 text-foreground-muted">
-                  Online
-                </div>
-              </div>
+              )}
             </div>
           </li>
         ))}
