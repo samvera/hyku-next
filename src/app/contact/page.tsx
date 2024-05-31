@@ -8,6 +8,7 @@ const contactCards = [
   {
     description:
       "An open and welcoming forum to find out what is in development for Hyku and to connect with users with similar needs.",
+    label: "Call Information",
     title: "Hyku Interest Group",
     url: "https://samvera.atlassian.net/wiki/spaces/samvera/pages/419533203/Samvera+Hyku+Interest+Group",
   },
@@ -19,15 +20,16 @@ const contactCards = [
   {
     description:
       "Request to join Samvera's slack workspace and join the #hyku channel. Introduce yourself and ask questions!",
-    title: "Samvera Slack",
     email: "",
+    label: "Slack Information",
+    title: "Samvera Slack",
     url: "https://samvera.atlassian.net/wiki/spaces/samvera/pages/405211682/Getting+Started+in+the+Samvera+Community#Join-the-Samvera-Slack-workspace",
   },
   {
-    title: "Email",
-    email: "info@samvera.org",
     description:
       "Email Us with questions, requests for demos, and other communications.",
+    email: "info@samvera.org",
+    title: "Email",
   },
 ];
 

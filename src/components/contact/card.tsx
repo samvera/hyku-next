@@ -1,6 +1,7 @@
 interface ContactCardProps {
   description?: string;
   email?: string;
+  label?: string;
   title: string;
   url?: string;
 }
@@ -8,6 +9,7 @@ interface ContactCardProps {
 export default function ContactCard({
   description,
   email,
+  label,
   title,
   url,
 }: ContactCardProps) {
@@ -31,7 +33,7 @@ export default function ContactCard({
                 className="font-semibold text-primary break-words no-underline"
                 href={url}
               >
-                {url}
+                {label || url}
               </a>
             )}
             {description && <p>{description}</p>}
