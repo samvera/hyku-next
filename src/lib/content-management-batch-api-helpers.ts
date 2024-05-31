@@ -18,7 +18,7 @@ async function batchHelper() {
     entries.items.map((entry) =>
       client.entry.unpublish({
         entryId: entry.sys.id,
-      })
-    )
+      }),
+    ),
   );
 }

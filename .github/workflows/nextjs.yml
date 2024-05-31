@@ -28,6 +28,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        job: ["prettier", "build"]
 
     env:
       NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.NEXT_PUBLIC_CONTENTFUL_SPACE_ID }}
@@ -86,12 +89,17 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Check formatting
+        run: npx prettier --check .
+        if: matrix.job == 'prettier'
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        if: matrix.job == 'build'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+        if: matrix.job == 'build'
 
   # Deployment job
   deploy:

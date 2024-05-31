@@ -33,7 +33,7 @@ function getContentfulManagement() {
           // We are only managing the "hyku" environment with this client
           environmentId: "hyku",
         },
-      }
+      },
     );
   }
 

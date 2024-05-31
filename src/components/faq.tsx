@@ -13,8 +13,10 @@ import useGetContentfulData from "@/hooks/use-get-contentful-data";
 export default function FaqList() {
   const data = useGetContentfulData("faq");
 
+  const foo = "asdf";
+
   return (
-    <div className="">
+    <div>
       <div className="mx-auto max-w-4xl divide-y divide-foreground/10">
         <dl className="mt-10 space-y-6 divide-y divide-foreground/10">
           {data &&
