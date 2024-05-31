@@ -30,7 +30,7 @@ export default function Implementations() {
                   <a
                     href={projectUrl}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noreferrer noopener"
                     className="inline-block"
                   >
                     {projectUrl}

@@ -16,10 +16,20 @@ export default function PresentationsPage() {
             description="In addition to the archived presentation below, useful Hyku feature demos can be found on YouTube."
           >
             <div className="mt-8 flex-row space-x-4">
-              <a href="#" className="button-primary">
+              <a
+                href="https://www.youtube.com/channel/UC_m1Ovaaasa2ksyGaqz5i0Q/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="button-primary"
+              >
                 Hyku YouTube Channel
               </a>
-              <a href="#" className="button">
+              <a
+                href="https://www.youtube.com/channel/UC1eopKtm-k_f93RTfzHSvMQ"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="button"
+              >
                 Hydra-in-a-Box (early demos)
               </a>
             </div>
