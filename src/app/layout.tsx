@@ -4,6 +4,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { Inter, Open_Sans } from "next/font/google";
 
 import Footer from "@/components/layout/footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Header from "@/components/layout/header";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
@@ -23,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!} />
       <body className={`${openSans.className} antialiased`}>
         <ThemeProvider attribute="class">
           <Header />
