@@ -28,7 +28,15 @@ pnpm build
 
 ## Testing
 
-This site will be tested using Playwright and Jest.
+This site will be tested using [Playwright](https://playwright.dev/docs). Tests are located in the `tests` directory. To run tests, run:
+
+```bash
+# Run tests in headless mode
+pnpm test
+
+# Run tests in interactive UI mode
+pnpm test:ui
+```
 
 ## Code Quality
 
