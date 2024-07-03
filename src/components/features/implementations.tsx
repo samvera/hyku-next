@@ -16,6 +16,7 @@ export default function Implementations() {
             const {
               fields: {
                 briefDescription,
+                informationalUrl,
                 institutionAndPartners,
                 mainFeatures,
                 productname,
@@ -36,6 +37,21 @@ export default function Implementations() {
                     {projectUrl}
                   </a>
                   <dl className="pt-4">
+                    {informationalUrl && (
+                      <>
+                        <dt>More Information</dt>
+                        <dd>
+                          <a
+                            href={informationalUrl}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                          >
+                            {informationalUrl}
+                          </a>
+                        </dd>
+                      </>
+                    )}
+
                     <dt>Institutional Partners</dt>
                     <dd>
                       <RichTextContent content={institutionAndPartners} />
