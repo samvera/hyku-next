@@ -72,14 +72,18 @@ test("has footer with links to social media", async ({ page }) => {
     "href",
     "http://twitter.com/HykuRepo",
   );
-  await expect(page.getByRole("link", { name: "GitHub" })).toHaveAttribute(
-    "href",
-    "https://github.com/samvera/hyku",
-  );
-  await expect(page.getByRole("link", { name: "YouTube" })).toHaveAttribute(
+  await expect(
+    footerLayout.getByRole("link", { name: "GitHub" }),
+  ).toHaveAttribute("href", "https://github.com/samvera/hyku");
+  await expect(
+    footerLayout.getByRole("link", { name: "YouTube" }),
+  ).toHaveAttribute(
     "href",
     "https://www.youtube.com/channel/UC_m1Ovaaasa2ksyGaqz5i0Q",
   );
+  await expect(
+    footerLayout.getByText("© 2024 Hyku. All rights"),
+  ).toBeVisible();
 });
 
 test("color theme switcher", async ({ page }) => {
