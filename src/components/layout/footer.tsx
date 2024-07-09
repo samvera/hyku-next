@@ -35,7 +35,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10">
+    <footer className="relative z-10" data-testid="layout-footer">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
@@ -63,6 +63,7 @@ export default function Footer() {
               key={item.name}
               href={item.href}
               className="text-foreground-muted/90 hover:text-foreground-muted"
+              data-testid={`social-${item.name}`}
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-5 w-5" aria-hidden="true" />
