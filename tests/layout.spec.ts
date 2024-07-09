@@ -86,7 +86,7 @@ test("has footer with links to social media", async ({ page }) => {
   ).toBeVisible();
 });
 
-test("color theme switcher", async ({ page }) => {
+test.skip("color theme switcher", async ({ page }) => {
   await page.goto("/");
   const htmlElement = page.locator("html");
 

@@ -11,7 +11,7 @@ export default function FeatureList() {
   });
 
   return (
-    <ul>
+    <ul data-testid="feature-list">
       {(isFetching || isPending) && <Skeleton count={5} />}
 
       {data &&
