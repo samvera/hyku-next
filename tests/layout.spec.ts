@@ -8,48 +8,100 @@ const links = [
   "Contact",
 ];
 
-test("has main heading and top level navigation", async ({ page }) => {
+test("has main heading and top level navigation", async ({
+  page,
+}, testInfo) => {
+  const isMobile = testInfo.project.name.includes("Mobile");
+
   await page.goto("/");
+  await page.waitForURL("/");
 
   const header = page.getByLabel("Global");
   await expect(header).toBeVisible();
 
   await expect(header.getByAltText("Hyku logo")).toBeVisible();
 
-  await page
-    .getByRole("link", { name: "Features and Implementations" })
-    .nth(1)
-    .click();
-  await expect(
-    page.getByRole("heading", { name: "Features and Implementations" }),
-  ).toBeVisible();
+  // Test desktop navigation
+  if (!isMobile) {
+    await page
+      .getByRole("link", { name: "Features and Implementations" })
+      .nth(1)
+      .click();
+    await expect(
+      page.getByRole("heading", { name: "Features and Implementations" }),
+    ).toBeVisible();
 
-  await page.getByRole("link", { name: "Getting Started" }).nth(1).click();
-  await expect(
-    page.getByRole("heading", { name: "Getting Started" }),
-  ).toBeVisible();
+    await page.getByRole("link", { name: "Getting Started" }).nth(1).click();
+    await expect(
+      page.getByRole("heading", { name: "Getting Started" }),
+    ).toBeVisible();
 
-  await page
-    .getByRole("link", { name: "Presentations and Demos" })
-    .nth(1)
-    .click();
-  await expect(
-    page.getByRole("heading", { name: "Presentations and Demos" }),
-  ).toBeVisible();
+    await page
+      .getByRole("link", { name: "Presentations and Demos" })
+      .nth(1)
+      .click();
+    await page.waitForURL("/presentations");
+    await expect(
+      page.getByRole("heading", { name: "Presentations and Demos" }),
+    ).toBeVisible();
 
-  await page.getByRole("link", { name: "News" }).nth(1).click();
-  await expect(
-    page.getByRole("heading", { name: "News and Events" }),
-  ).toBeVisible();
+    await page.getByRole("link", { name: "News" }).nth(1).click();
+    await page.waitForURL("/news");
+    await expect(
+      page.getByRole("heading", { name: "News and Events" }),
+    ).toBeVisible();
 
-  await page.getByRole("link", { name: "Contact" }).nth(1).click();
-  await expect(
-    page.getByRole("heading", { name: "Get in touch" }),
-  ).toBeVisible();
+    await page.getByRole("link", { name: "Contact" }).nth(1).click();
+    await page.waitForURL("/contact");
+    await expect(
+      page.getByRole("heading", { name: "Get in touch" }),
+    ).toBeVisible();
 
-  await expect(
-    page.getByRole("link", { name: "Learn more" }).nth(1),
-  ).toHaveAttribute("href", "https://github.com/samvera/hyku");
+    await expect(
+      page.getByRole("link", { name: "Learn more" }).nth(1),
+    ).toHaveAttribute("href", "https://github.com/samvera/hyku");
+  }
+
+  // Test mobile navigation
+  if (isMobile) {
+    await page.goto("/");
+
+    const mobileMenuEl = page.getByTestId("mobile-menu");
+    const hamburgerEl = page.getByRole("button", { name: "Open main menu" });
+
+    await hamburgerEl.click();
+    await mobileMenuEl
+      .getByRole("link", { name: "Features and Implementations" })
+      .click();
+
+    await expect(page.locator("h1")).toContainText(
+      "Features and Implementations",
+    );
+
+    await hamburgerEl.click();
+    await mobileMenuEl.getByRole("link", { name: "Getting Started" }).click();
+
+    await expect(page.locator("h1")).toContainText("Getting Started");
+
+    await hamburgerEl.click();
+    await mobileMenuEl
+      .getByRole("link", { name: "Presentations and Demos" })
+      .click();
+
+    await expect(page.locator("h1")).toContainText("Presentations and Demos");
+
+    await hamburgerEl.click();
+    await mobileMenuEl.getByRole("link", { name: "News" }).click();
+
+    await expect(page.locator("h1")).toContainText("News and Events");
+
+    await hamburgerEl.click();
+    await mobileMenuEl.getByRole("link", { name: "Contact" }).click();
+
+    await expect(
+      page.getByRole("heading", { name: "Get in touch" }),
+    ).toBeVisible();
+  }
 });
 
 test("has footer with links to social media", async ({ page }) => {

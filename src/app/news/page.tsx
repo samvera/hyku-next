@@ -1,6 +1,5 @@
 import BgLayer from "@/components/layout/bg-layer";
 import Container from "@/components/layout/container";
-import Header from "@/components/layout/header";
 import MainWrapper from "@/components/layout/main-wrapper";
 import { Metadata } from "next";
 import NewsList from "@/components/news/list";
@@ -14,7 +13,6 @@ export const metadata: Metadata = {
 export default function Homepage() {
   return (
     <div className="">
-      <Header />
       <MainWrapper>
         <BgLayer>
           <PageHeader

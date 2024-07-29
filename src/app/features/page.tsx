@@ -1,7 +1,6 @@
 import BgLayer from "@/components/layout/bg-layer";
 import Container from "@/components/layout/container";
 import FeatureList from "@/components/features/list";
-import Header from "@/components/layout/header";
 import Implementations from "@/components/features/implementations";
 import MainWrapper from "@/components/layout/main-wrapper";
 import { Metadata } from "next";
@@ -14,7 +13,6 @@ export const metadata: Metadata = {
 export default async function FeaturesPage() {
   return (
     <div className="">
-      <Header />
       <MainWrapper>
         <BgLayer>
           <PageHeader

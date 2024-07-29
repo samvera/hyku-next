@@ -2,7 +2,6 @@ import BgLayer from "@/components/layout/bg-layer";
 import Container from "@/components/layout/container";
 import FaqList from "@/components/faq";
 import GettingStartedList from "@/components/getting-started/list";
-import Header from "@/components/layout/header";
 import HostedSolutions from "@/components/hosted-solutions";
 import MainWrapper from "@/components/layout/main-wrapper";
 import { Metadata } from "next";
@@ -15,7 +14,6 @@ export const metadata: Metadata = {
 export default function GettingStartedPage() {
   return (
     <div className="">
-      <Header />
       <BgLayer>
         <MainWrapper>
           <PageHeader
