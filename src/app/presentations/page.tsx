@@ -26,7 +26,7 @@ export default function PresentationsPage() {
                 rel="noreferrer noopener"
                 className="button-primary"
               >
-                Hyku on Youtube
+                Hyku on YouTube
               </a>
             </div>
           </PageHeader>
