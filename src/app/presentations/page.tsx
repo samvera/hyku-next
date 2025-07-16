@@ -26,10 +26,10 @@ export default function PresentationsPage() {
                 rel="noreferrer noopener"
                 className="button-primary"
               >
-                Hyku YouTube Channel
+                Samvera YouTube Channel
               </a>
               <a
-                href="https://www.youtube.com/channel/UC1eopKtm-k_f93RTfzHSvMQ"
+                href="https://www.youtube.com/@samveracommunity6617"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="button"
