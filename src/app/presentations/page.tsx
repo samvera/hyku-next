@@ -28,14 +28,6 @@ export default function PresentationsPage() {
               >
                 Samvera YouTube Channel
               </a>
-              <a
-                href="https://www.youtube.com/@samveracommunity6617"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="button"
-              >
-                Hydra-in-a-Box (early demos)
-              </a>
             </div>
           </PageHeader>
           <Container>
