@@ -21,12 +21,12 @@ export default function PresentationsPage() {
           >
             <div className="mt-8 flex-row space-x-4">
               <a
-                href="https://www.youtube.com/@samveracommunity6617"
+                href="https://www.youtube.com/playlist?list=PLvnoImgmm7CfNHLipyYReZHHZtMF-r_Jf"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="button-primary"
               >
-                Samvera YouTube Channel
+                Hyku on Youtube
               </a>
             </div>
           </PageHeader>
