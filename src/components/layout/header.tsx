@@ -88,7 +88,7 @@ const Header = () => {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="https://github.com/samvera/hyku"
+            href="https://samvera.atlassian.net/wiki/spaces/hyku/overview"
             className="text-sm font-semibold leading-6 text-foreground hover:text-foreground/90"
             target="_blank"
             rel="noopener noreferrer"
