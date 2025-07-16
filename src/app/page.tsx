@@ -18,7 +18,7 @@ export default function Homepage() {
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-foreground-muted">
                   Hyku is a digital repository that provides a robust and
-                  flexible platform for institutions to manage, preserve, and
+                  flexible platform for institutions to manage and
                   provide access to digital content.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
