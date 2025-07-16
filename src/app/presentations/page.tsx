@@ -21,7 +21,7 @@ export default function PresentationsPage() {
           >
             <div className="mt-8 flex-row space-x-4">
               <a
-                href="https://www.youtube.com/channel/UC_m1Ovaaasa2ksyGaqz5i0Q/"
+                href="https://www.youtube.com/@samveracommunity6617"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="button-primary"
