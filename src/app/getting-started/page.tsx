@@ -18,7 +18,7 @@ export default function GettingStartedPage() {
         <MainWrapper>
           <PageHeader
             title="Getting Started"
-            description="There are many resource for newcomers to Hyku and contributors to the community."
+            description="There are many resources for newcomers to Hyku and contributors to the community."
           />
           <Container>
             <div className="space-y-16">
