@@ -1,7 +1,6 @@
 import Container from "@/components/layout/container";
 
 const hostedSolutions = [
-  
   {
     name: "Service Providers page",
     description:
