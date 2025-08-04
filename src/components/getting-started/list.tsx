@@ -32,8 +32,8 @@ const features = [
   {
     name: "Hyku vs. Hyrax",
     description:
-      "Hyrax is a Samvera Community Rails engine that creates a repository application. Hyku is the polished, turn-key repository solution built on Hyrax. Hyku offers the functionality of Hyrax in a ready-to-use application, while Hyrax can often be a better choice for repositories that require significant customization. Read more about the differences between Hyrax and Hyku in the Hyku Documentation.",
-    href: "https://samvera.atlassian.net/wiki/spaces/hyku/pages/718084040/Hyku+and+Hyrax+How+are+they+related+and+how+are+they+different",
+      "Hyrax is a Samvera Community Rails engine that creates a repository application. Hyku is the polished, turn-key repository solution built on Hyrax. Hyku offers the functionality of Hyrax in a ready-to-use application, while Hyrax can often be a better choice for repositories that require significant customization. Read more about the differences between Hyrax and Hyku in the Hyku Documentation wiki space.",
+    href: "https://samvera.atlassian.net/wiki/spaces/hyku/pages/3244523522/1.3.1+Hyku+vs+Hyrax+Questions+and+Answers",
     icon: QuestionMarkCircleIcon,
   },
   {
