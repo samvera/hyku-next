@@ -16,11 +16,7 @@ const navigationExtended = [
 ];
 
 const socials = [
-  {
-    name: "X",
-    href: "http://twitter.com/HykuRepo",
-    icon: Twitter,
-  },
+ 
   {
     name: "GitHub",
     href: "https://github.com/samvera/hyku",
