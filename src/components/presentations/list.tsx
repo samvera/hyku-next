@@ -14,17 +14,19 @@ export default function PresentationsList() {
 
   let sorted = data ? data.sort(sortDates("desc", "publishedDate")) : [];
   let mapped = sorted.map(({ fields, sys }: { fields: any; sys: any }) => {
-    let output = { fields, sys };
+    let fieldsCopy: any = { ...fields };
     // I am not certain why this was required. Perhaps the content models were updated but not for all Presentations?
-    if (!fields.speakers) {
-      fields.speakers = [];
+    if (!fieldsCopy.speakers) {
+      fieldsCopy.speakers = [];
     }
-    if (!fields.date) {
+    if (!fieldsCopy.date) {
       console.warn(
         `Missing date for presentation ${sys.id}, using sys.createdAt instead`,
       );
-      fields.date = new Date(sys.createdAt).toISOString();
+      fieldsCopy.date = new Date(sys.createdAt).toISOString();
     }
+    const output: any = { fields: fieldsCopy, sys };
+
     return output;
   });
 
