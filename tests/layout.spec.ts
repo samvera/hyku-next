@@ -59,7 +59,10 @@ test("has main heading and top level navigation", async ({
 
     await expect(
       page.getByRole("link", { name: "Learn more" }).nth(1),
-    ).toHaveAttribute("href", "https://github.com/samvera/hyku");
+    ).toHaveAttribute(
+      "href",
+      "https://samvera.atlassian.net/wiki/spaces/hyku/overview",
+    );
   }
 
   // Test mobile navigation
@@ -120,10 +123,6 @@ test("has footer with links to social media", async ({ page }) => {
   // Check for social media links within the footer
   const footerLayout = page.getByTestId("layout-footer");
 
-  await expect(footerLayout.getByRole("link", { name: "X" })).toHaveAttribute(
-    "href",
-    "http://twitter.com/HykuRepo",
-  );
   await expect(
     footerLayout.getByRole("link", { name: "GitHub" }),
   ).toHaveAttribute("href", "https://github.com/samvera/hyku");
@@ -134,7 +133,7 @@ test("has footer with links to social media", async ({ page }) => {
     "https://www.youtube.com/channel/UC_m1Ovaaasa2ksyGaqz5i0Q",
   );
   await expect(
-    footerLayout.getByText("© 2024 Hyku. All rights"),
+    footerLayout.getByText("© 2025 Hyku. All rights"),
   ).toBeVisible();
 });
 

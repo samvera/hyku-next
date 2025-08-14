@@ -12,13 +12,29 @@ export default function PresentationsList() {
     queryFn: () => getData("presentation"),
   });
 
-  const sorted = data ? data.sort(sortDates("desc", "publishedDate")) : [];
+  let sorted = data ? data.sort(sortDates("desc", "publishedDate")) : [];
+  let mapped = sorted.map(({ fields, sys }: { fields: any; sys: any }) => {
+    let fieldsCopy: any = { ...fields };
+    // I am not certain why this was required. Perhaps the content models were updated but not for all Presentations?
+    if (!fieldsCopy.speakers) {
+      fieldsCopy.speakers = [];
+    }
+    if (!fieldsCopy.date) {
+      console.warn(
+        `Missing date for presentation ${sys.id}, using sys.createdAt instead`,
+      );
+      fieldsCopy.date = new Date(sys.createdAt).toISOString();
+    }
+    const output: any = { fields: fieldsCopy, sys };
+
+    return output;
+  });
 
   return (
     <ul role="list" className="list-none ml-0 divide-y divide-gray-100 ">
       {(isFetching || isPending) && <Skeleton count={5} height={50} />}
-      {sorted.length > 0 &&
-        sorted.map(({ fields, sys }: { fields: any; sys: any }) => (
+      {mapped.length > 0 &&
+        mapped.map(({ fields, sys }: { fields: any; sys: any }) => (
           <li
             key={sys.id}
             className="flex flex-col space-y-2 md:space-y-0 md:flex-row justify-between items-start w-full py-6 animate-fade-in"

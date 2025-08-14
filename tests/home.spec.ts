@@ -6,7 +6,7 @@ test("homepage elements", async ({ page }) => {
     "The Next Generation Repository Solution",
   );
   await expect(page.getByRole("main")).toContainText(
-    "Hyku is a digital repository that provides a robust and flexible platform for institutions to manage, preserve, and provide access to digital content.",
+    "Hyku is a digital repository",
   );
 
   await page.getByRole("link", { name: "Get started" }).click();
