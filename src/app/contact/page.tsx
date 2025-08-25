@@ -36,7 +36,15 @@ const contactCards = [
   },
   {
     description:
-      "Email Us with questions, requests for demos, and other communications.",
+      "See the list of Hyku service providers to request demos, request proposals, or explore hosting and migration assistance options.",
+    email: "",
+    label: "Service Providers",
+    title: "Samvera Community Service Providers",
+    url: "https://samvera.org/the-community/service-providers",
+  },
+  {
+    description:
+      "Email Us with questions or to connect with the community.",
     email: "info@samvera.org",
     title: "Email",
   },
