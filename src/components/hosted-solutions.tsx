@@ -16,7 +16,7 @@ export default function HostedSolutions() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2>Hosted Solutions</h2>
           <p className="mt-6 text-lg leading-8 text-foreground-muted">
-            Service providers offering hosted Hyku solutions. 
+            Service providers offering hosted Hyku solutions.
           </p>
         </div>
         <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">

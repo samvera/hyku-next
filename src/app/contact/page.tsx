@@ -26,7 +26,7 @@ const contactCards = [
     title: "Samvera Slack",
     url: "https://samvera.atlassian.net/wiki/spaces/samvera/pages/405211682/Getting+Started+in+the+Samvera+Community#Join-the-Samvera-Slack-workspace",
   },
-   {
+  {
     description:
       "Visit Samvera.org to learn more about the Samvera Community supporting Hyku",
     email: "",

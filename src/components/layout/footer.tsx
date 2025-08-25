@@ -16,7 +16,6 @@ const navigationExtended = [
 ];
 
 const socials = [
- 
   {
     name: "GitHub",
     href: "https://github.com/samvera/hyku",
