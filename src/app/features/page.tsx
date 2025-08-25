@@ -30,7 +30,10 @@ export default async function FeaturesPage() {
               <div>
                 <h3>Hyku 6.1</h3>
                 <p>
-                  Hyku 6.1 was released in May 2025, including 6.0 changes like upgrading to Hyrax 5, adding support for Valkyrie, and adding OER and ETD work types, as well as updating Bulkrax and fixing google analytics.
+                  Hyku 6.1 was released in May 2025, including 6.0 changes like
+                  upgrading to Hyrax 5, adding support for Valkyrie, and adding
+                  OER and ETD work types, as well as updating Bulkrax and fixing
+                  google analytics.
                 </p>
               </div>
               <div>
