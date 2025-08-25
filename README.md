@@ -26,6 +26,16 @@ This site will be deployed on to Github Pages as a static site. To do a local bu
 pnpm build
 ```
 
+### IMPORTANT
+
+_Please ensure that, before pushing any commits which introduce changes to the site, that you run the following:_
+
+```bash
+npx prettier --write .
+```
+
+_Failure to do so may result in your changes not being deployed to the production website._
+
 ## Testing
 
 This site will be tested using [Playwright](https://playwright.dev/docs). Tests are located in the `tests` directory. To run tests, run:

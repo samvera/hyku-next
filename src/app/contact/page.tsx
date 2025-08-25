@@ -43,8 +43,7 @@ const contactCards = [
     url: "https://samvera.org/the-community/service-providers",
   },
   {
-    description:
-      "Email Us with questions or to connect with the community.",
+    description: "Email Us with questions or to connect with the community.",
     email: "info@samvera.org",
     title: "Email",
   },
