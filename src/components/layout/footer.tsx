@@ -10,7 +10,7 @@ const navigationExtended = [
   ...navigation,
   {
     name: "Learn More",
-    href: "https://github.com/samvera/hyku",
+    href: "https://samvera.atlassian.net/wiki/spaces/hyku/overview",
     isExternal: true,
   },
 ];
